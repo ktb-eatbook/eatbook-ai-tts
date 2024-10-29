@@ -1,0 +1,33 @@
+{
+  "model": {
+    "encoder_embedding_dim": 512,
+    "encoder_conv_layers": 3,
+    "encoder_kernel_size": 5,
+    "decoder_rnn_dim": 1024,
+    "attention_rnn_dim": 1024,
+    "attention_dim": 128,
+    "prenet_dim": 256,
+    "postnet_embedding_dim": 512,
+    "n_mel_channels": 80
+  },
+  "training": {
+    "batch_size": 128,
+    "learning_rate": 1e-4,
+    "epochs": 10,
+    "grad_clip_thresh": 1.0,
+    "save_interval":2
+  },
+  "data": {
+    "mel_sample_rate": 22050,
+    "n_mel_channels": 80,
+    "n_fft": 1024,
+    "win_length": 1024,
+    "hop_length": 256,
+    "f_min": 0,
+    "f_max": 8000
+  },
+  "paths": {
+    "checkpoint_path": "checkpoints/tacotron2_checkpoint.pth",
+    "data_path": "data/processed"
+  }
+}
